@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: "Forth post"
+title: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 description: "Lorem ipsum dolor sit amet"
 date: 2022-07-08
 author: "Astro Learner"
 image:
-  url: "https://astro-sample-test.pages.dev/placeholder-hero.jpg"
+  url: "https://unsplash.it/640/425?image=30"
   alt: "Lorem Ipsum"
 tags: ["lorem ipsum", "blogging"]
 ---

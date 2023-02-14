@@ -1,6 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import PostHeader from "../components/PostHeader.astro";
+import PostHeader2 from "../components/PostHeader2.astro";
 import SiteLayout from "./SiteLayout.astro";
 
 const { frontmatter } = Astro.props;
@@ -8,7 +9,8 @@ const { title, description } = frontmatter;
 ---
 
 <SiteLayout {title} {description}>
-  <PostHeader {frontmatter} />
+  <!-- <PostHeader {frontmatter} /> -->
+  <PostHeader2 {frontmatter} />
   <section class="container mx-auto px-4 py-12 lg:px-24">
     <div class="prose lg:prose-lg mx-auto">
       <slot />

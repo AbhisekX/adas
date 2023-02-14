@@ -5,7 +5,7 @@ description: "This is the first post of my new Astro blog."
 date: 2022-07-01
 author: "Astro Learner"
 image:
-  url: "https://astro.build/assets/blog/astro-1-release-update/cover.jpeg"
+  url: "https://unsplash.it/2560/1900?image=29"
   alt: "The Astro logo with the word One."
 tags: ["astro", "blogging", "learning in public"]
 ---
