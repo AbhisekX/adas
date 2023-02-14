@@ -1,15 +1,29 @@
 {
-	"name": "adas",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"astro": "^2.0.9"
-	}
+  "name": "adas",
+  "type": "module",
+  "version": "0.0.1",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/image": "^0.14.1",
+    "@astrojs/tailwind": "^3.0.1",
+    "astro": "^2.0.10",
+    "astro-icon": "^0.8.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "postcss-preset-env": "^8.0.1",
+    "sharp": "^0.31.3",
+    "tailwindcss": "^3.2.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9"
+  }
 }

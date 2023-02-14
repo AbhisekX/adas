@@ -1,0 +1,41 @@
+---
+import { Image } from "@astrojs/image/components";
+const { title, description, date, author, image, tags } =
+  Astro.props.frontmatter;
+---
+
+<section class="pt-20 pb-8 bg-neutral-300">
+  <div class="container mx-auto px-4 grid place-items-center gap-8 lg:px-24">
+    <div class="space-y-4 text-center">
+      <h1 class="text-6xl font-extrabold">{title}</h1>
+      <p class="text-lg font-medium">
+        by {author} &middot; {date.slice(0, 10)}
+      </p>
+
+      <div class="space-x-2">
+        {
+          tags.map((tag) => (
+            <small class="px-2 py-1 inline-block rounded bg-black">
+              <a
+                href={`/tags/${tag}`}
+                class="before:content-['#'] font-semibold text-white hover:underline"
+              >
+                {tag}
+              </a>
+            </small>
+          ))
+        }
+      </div>
+    </div>
+
+    <Image
+      src={image.url}
+      alt={image.alt}
+      width={600}
+      height={300}
+      format="webp"
+      fit="cover"
+      class="w-full max-w-[50rem]"
+    />
+  </div>
+</section>

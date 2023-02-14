@@ -1,0 +1,22 @@
+---
+const { prevUrl, nextUrl } = Astro.props;
+---
+
+<nav
+  class="px-6 py-4 space-x-12 flex justify-between rounded-lg border-2 border-black lg:inline-block"
+>
+  {
+    prevUrl && (
+      <a href={prevUrl} class="font-semibold hover:underline">
+        Previous
+      </a>
+    )
+  }
+  {
+    nextUrl && (
+      <a href={nextUrl} class="ml-auto font-semibold hover:underline">
+        Next
+      </a>
+    )
+  }
+</nav>

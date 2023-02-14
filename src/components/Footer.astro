@@ -1,0 +1,16 @@
+---
+---
+
+<footer
+  class="w-full p-5 text-center text-base font-semibold text-neutral-400 bg-black"
+>
+  <small>
+    Copyright &copy; <span id="copyright"></span> | All rights reserved
+  </small>
+</footer>
+
+<script>
+  document.getElementById("copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>

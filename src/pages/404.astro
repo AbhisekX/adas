@@ -1,0 +1,24 @@
+---
+import { Icon } from "astro-icon";
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+
+<style>
+  [astro-icon="arrow"] {
+    width: 10rem;
+    position: fixed;
+    top: 4rem;
+    left: 4rem;
+    fill: var(--fg);
+  }
+</style>
+
+<SiteLayout title="Page Not Found">
+  <section class="container h-full pt-20 grid place-items-center">
+    <div class="text-center">
+      <h1 class="text-8xl font-black">404</h1>
+      <p class="text-2xl font-medium">Page not found!</p>
+    </div>
+  </section>
+  <Icon name="arrow" />
+</SiteLayout>
