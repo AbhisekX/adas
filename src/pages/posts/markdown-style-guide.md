@@ -5,7 +5,7 @@ description: "Here is a sample of some basic Markdown syntax that can be used wh
 date: 2022-07-09
 author: "Astro Learner"
 image:
-  url: "https://unsplash.it/2560/1900?image=19"
+  src: "https://unsplash.it/1280/950?image=19"
   alt: "Markdown"
 tags: ["markdown", "blogging"]
 ---

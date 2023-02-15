@@ -5,7 +5,7 @@ description: "Lorem ipsum dolor sit amet"
 date: 2022-07-08
 author: "Astro Learner"
 image:
-  url: "https://unsplash.it/640/425?image=18"
+  src: "https://unsplash.it/640/425?image=18"
   alt: "Lorem Ipsum"
 tags: ["lorem ipsum", "blogging"]
 ---

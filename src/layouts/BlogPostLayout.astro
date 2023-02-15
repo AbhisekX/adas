@@ -5,10 +5,10 @@ import PostHeader2 from "../components/PostHeader2.astro";
 import SiteLayout from "./SiteLayout.astro";
 
 const { frontmatter } = Astro.props;
-const { title, description } = frontmatter;
+const { title, description, image } = frontmatter;
 ---
 
-<SiteLayout {title} {description}>
+<SiteLayout {title} {description} {image}>
   <!-- <PostHeader {frontmatter} /> -->
   <PostHeader2 {frontmatter} />
   <section class="container mx-auto px-4 py-12 lg:px-24">

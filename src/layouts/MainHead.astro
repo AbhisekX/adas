@@ -1,14 +1,45 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
+const altImg = "/images/og-image-default";
 ---
 
 <head>
+  <!-- Global Metadata -->
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content={Astro.generator} />
-  <meta name="description" content={description} />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href={Astro.url} />
+
+  <!-- Primary Meta Tags -->
   <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:site_name" content={Astro.site} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image?.src || altImg} />
+  <meta property="og:image:secure_url" content={image?.src || altImg} />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={title} />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={Astro.url} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={image?.src || altImg} />
+  <meta property="twitter:image:alt" content={title} />
+
+  <!-- Load Font -->
   <link rel="preconnect" href="https://rsms.me/" />
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 </head>
