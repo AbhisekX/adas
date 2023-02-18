@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
 title: "First post"
 description: "Lorem ipsum dolor sit amet"
 date: 2022-07-08
-author: "Astro Learner"
+author: "Abhisek Das"
 image:
   src: "https://unsplash.it/1280/950?image=20"
   alt: "Lorem Ipsum"

@@ -1,11 +1,11 @@
 ---
 import { Image } from "@astrojs/image/components";
-const { frontmatter, url } = Astro.props;
-const { title, description, date, author, image, tags } = frontmatter;
+const { data, url } = Astro.props;
+const { title, description, date, author, image, tags } = data;
 ---
 
 <article class="grid gap-1">
-  <a href={url}>
+  <a href={`/posts/${url}`}>
     <Image
       src={image.src}
       alt={image.alt}
@@ -20,7 +20,7 @@ const { title, description, date, author, image, tags } = frontmatter;
     <h2 class="text-2xl font-bold">{title}</h2>
   </a>
 
-  <small>by {author} &middot; {date.slice(0, 10)}</small>
+  <small>by {author} &bull; {date.toDateString()}</small>
 
   <div class="space-x-2">
     {

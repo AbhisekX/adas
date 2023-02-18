@@ -1,7 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
-const { title, description, date, author, image, tags } =
-  Astro.props.frontmatter;
+const { title, description, date, author, image, tags } = Astro.props;
 ---
 
 <section
@@ -22,7 +21,7 @@ const { title, description, date, author, image, tags } =
       </h1>
       <p class="text-lg font-medium">
         <span class="text-white bg-black"
-          >by {author} &bull; {date.slice(0, 10)}</span
+          >by {author} &bull; {date.toDateString()}</span
         >
       </p>
 

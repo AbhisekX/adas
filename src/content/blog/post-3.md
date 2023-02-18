@@ -1,11 +1,10 @@
 ---
-layout: ../../layouts/BlogPostLayout.astro
-title: "Post 4"
+title: "Post 3"
 description: "This is the first post of my new Astro blog."
 date: 2022-07-01
-author: "Astro Learner"
+author: "Abhisek Das"
 image:
-  src: "https://source.unsplash.com/fIPXnxN7-9A"
+  src: "https://source.unsplash.com/wUbNvDTsOIc"
   alt: "The Astro logo with the word One."
 tags: ["astro", "blogging", "learning in public"]
 ---
