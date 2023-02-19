@@ -19,7 +19,9 @@ const {
 
 <html lang="en">
   <MainHead {title} {description} {image} />
-  <body class="min-h-screen grid grid-rows-[1fr_auto]">
+  <body
+    class="min-h-screen grid grid-rows-[1fr_auto] grid-cols-[minmax(0,1fr)]"
+  >
     <Header />
     <main>
       <slot />
