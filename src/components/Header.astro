@@ -13,6 +13,7 @@
     <nav class="flex gap-4">
       <a href="/about" class="font-semibold hover:underline">About</a>
       <a href="/posts" class="font-semibold hover:underline">Blog</a>
+      <a href="/notes" class="font-semibold hover:underline">Notes</a>
     </nav>
   </div>
 </header>
@@ -20,9 +21,9 @@
 <script>
   window.onscroll = () => {
     if (document.documentElement.scrollTop > 20) {
-      document.getElementById("header").classList.add("bg-white");
+      document.getElementById("header")?.classList.add("bg-white");
     } else {
-      document.getElementById("header").classList.remove("bg-white");
+      document.getElementById("header")?.classList.remove("bg-white");
     }
   };
 </script>
