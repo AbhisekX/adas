@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon";
+import { JAVA_SIDEBAR } from "../../consts";
+---
+
+<nav>
+  <div class="mb-4">
+    <a href="/java" class="font-semibold hover:underline">Overview</a>
+  </div>
+  <ul class="space-y-4">
+    {
+      Object.entries(JAVA_SIDEBAR).map(([header, children]) => (
+        <li>
+          <details open>
+            <summary class="mb-2 list-none cursor-pointer">
+              <h2 class="font-semibold">
+                {header} <Icon name="ic:round-keyboard-arrow-right" />
+              </h2>
+            </summary>
+            <ul class="space-y-2">
+              {children.map((child) => (
+                <li>
+                  <a
+                    href={`/java/${header.toLowerCase().split(" ").join("-")}/${
+                      child.link
+                    }`}
+                    class="text-neutral-500 hover:underline"
+                  >
+                    {child.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  [astro-icon="ic:round-keyboard-arrow-right"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    transition: 0.15s transform ease;
+    vertical-align: middle;
+  }
+
+  details[open] summary svg {
+    transform: rotate(90deg);
+  }
+</style>

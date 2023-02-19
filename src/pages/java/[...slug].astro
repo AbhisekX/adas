@@ -1,0 +1,64 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import LeftSidebar from "../../components/docs/LeftSidebar.astro";
+import TOC from "../../components/docs/TOC.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("java", ({ data }) => {
+    return !data.draft;
+  });
+
+  return allPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"java">;
+
+const post = Astro.props;
+const { title, description, image } = post.data;
+const { Content, headings } = await post.render();
+---
+
+<SiteLayout {title} {description} {image}>
+  <section
+    class="container mx-auto px-4 pt-20 pb-6 lg:px-24 md:grid md:gap-12 md:grid-cols-[3fr_minmax(0,7fr)] xl:grid-cols-[2fr_minmax(0,6fr)_2fr]"
+  >
+    <div class="mb-8 flex md:hidden">
+      <button
+        class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-gray-200 hover:bg-gray-100"
+        aria-label="Open mobile nav"
+        onclick="openChapters()">All Chapters</button
+      >
+    </div>
+
+    <aside
+      id="LeftSidebar"
+      class="hidden sticky top-0 md:pt-16 h-full md:block"
+    >
+      <LeftSidebar />
+    </aside>
+
+    <div id="main-doc" class="md:pt-16">
+      <div class="prose mx-auto">
+        <h1>{title}</h1>
+        <hr />
+        <Content />
+      </div>
+    </div>
+
+    <aside id="TOC" class="hidden sticky top-0 md:pt-16 h-screen xl:block">
+      <TOC {headings} />
+    </aside>
+  </section>
+</SiteLayout>
+
+<script is:inline>
+  function openChapters() {
+    const LeftSidebar = document.getElementById("LeftSidebar");
+    LeftSidebar.classList.toggle("hidden");
+    LeftSidebar.classList.toggle("sticky");
+    document.getElementById("main-doc").classList.toggle("hidden");
+  }
+</script>
