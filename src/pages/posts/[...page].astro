@@ -9,7 +9,7 @@ export async function getStaticPaths({ paginate }) {
     return !data.draft && data.date < new Date();
   });
   const formattedPosts: CollectionEntry<"blog">[] = allPosts.sort(
-    (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
   );
 
   return paginate(formattedPosts, { pageSize: 6 });
@@ -23,7 +23,7 @@ const { page } = Astro.props;
     class="container mx-auto px-4 pt-20 pb-6 lg:px-24"
     aria-label="New Blog Posts"
   >
-    <h1 class="text-6xl font-extrabold">Blog</h1>
+    <h1 class="text-5xl font-extrabold">Blog</h1>
     <div class="my-8 grid gap-x-8 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
       {page.data.map((post) => <PostCard data={post.data} url={post.slug} />)}
     </div>
