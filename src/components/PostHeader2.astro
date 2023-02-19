@@ -5,7 +5,7 @@ const { title, description, date, author, image, tags } = Astro.props;
 <section
   class="h-screen pt-20 pb-8 bg-no-repeat bg-center bg-cover"
   style={{
-    backgroundImage: `linear-gradient(transparent 40%, #000000cc), url(${image.src})`,
+    backgroundImage: `linear-gradient(transparent 40%, #000000cc), url(/${image.src})`,
   }}
 >
   <div

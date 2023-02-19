@@ -1,10 +1,10 @@
 ---
-title: "Markdown"
+title: "Markdown Style Guide"
 description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
-date: 2022-07-09
+date: 2023-02-20
 author: "Abhisek Das"
 image:
-  src: "https://source.unsplash.com/_t-l5FFH8VA"
+  src: "images/blog/markdown-style-guide/background.avif"
   alt: "Markdown"
 tags: ["markdown", "blogging"]
 ---
@@ -69,9 +69,7 @@ The blockquote element represents content that is quoted from another source, op
     <title>Example HTML5 Document</title>
   </head>
   <body>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi facilis aperiam fugiat porro corrupti modi minima eligendi aliquid suscipit quibusdam culpa repellat eos totam, cum earum et dolor incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi facilis aperiam fugiat porro corrupti modi minima eligendi aliquid suscipit quibusdam culpa repellat eos totam, cum earum et dolor incidunt.
-    </p>
+    <p>Test</p>
   </body>
 </html>
 ```
