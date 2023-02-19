@@ -1,5 +1,4 @@
 ---
-import { Image } from "@astrojs/image/components";
 const { title, description, date, author, image, tags } = Astro.props;
 ---
 
@@ -13,13 +12,13 @@ const { title, description, date, author, image, tags } = Astro.props;
     class="container h-full mx-auto px-4 grid place-items-center gap-8 lg:px-24"
   >
     <div class="space-y-4 text-center">
-      <h1 class="text-6xl font-extrabold tracking-tight">
+      <h1 class="text-5xl font-extrabold tracking-tight lg:text-6xl">
         <span
           class="bg-[linear-gradient(transparent_50%,_#fff_0%,_#fff_90%,_transparent_90%)] bg-no-repeat bg-cover"
           >{title}</span
         >
       </h1>
-      <p class="text-lg font-medium">
+      <p class="text-md font-medium">
         <span class="text-white bg-black"
           >by {author} &bull; {date.toDateString()}</span
         >
